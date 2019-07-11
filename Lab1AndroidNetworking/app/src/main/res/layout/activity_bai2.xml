@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="bai2"
+            type="com.tranduc.lab1androidnetworking.bai2.Bai2Presenter" />
+        <variable
+            name="model"
+            type="com.tranduc.lab1androidnetworking.bai1.Bai1Model" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_bai2"
+            android:textSize="30dp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_margin="25dp"
+            android:src="@mipmap/ic_launcher"
+            app:imageUrl="@{model.url}"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="@string/button_load"
+            android:onClick="@{v->bai2.loadImage()}"/>
+
+    </LinearLayout>
+
+</layout>
